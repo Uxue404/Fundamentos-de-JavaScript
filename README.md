@@ -157,7 +157,7 @@ Al igual que las matemáticas, **las operaciones siguen un orden de precedencia.
 (2 + 2) * 3 // 12
 ```
 ---
-#### Cadenas de texto
+### Cadenas de texto
 
 Las cadenas de texto (tipo **String**) es otro tipo de dato muy común. Las cadenas de texto se representan entre comillas simples, dobles o acentos graves.
  ```js
@@ -183,11 +183,12 @@ Para poder unir dos o mas cadenas de texto, se usa el operador **+**:
 ***Como puedes notar el operador `+` funciona de forma diferente dependiendo del tipo de dato que estemos usando***
 
 ___
-#### Booleanos
+### Booleanos
 Los booleanos represneta sólo dos valores: `true` (verdadero) o `false` (falso). Por ejemplo: 
 * ¿Está lloviendo (`true`) o no está lloviendo (`false`)?
 
-#### Operadores de comparación
+---
+### Operadores de comparación
 
 Estos tipos de operadores nos **nos permiten comparar dos valores**. Y estos siempren devuelven un valor booleano (`true` o `false`).
 
@@ -205,7 +206,7 @@ Tambien tenemos los operadores `>=` y `<=` que nos permiten comparar si un núme
 5 <= 3 // false
 5 <= 5 // true
 ```
-Para saber si dos valores son iguales se usa el operador `==`^
+Para saber si dos valores son iguales se usa el operador `==`
 ```js
 4 == 4 // true 
 3 == 4 //false

@@ -21,7 +21,7 @@ JavaScript es un lenguaje orientado a objetos (utiliza clases y objetos).
 
 - Un lenguajes compilado son convertidos en su totalidad a código maquina, y asi la computadora ejecuta el código.
 
-- el lenguajes interpretado ejecuta línea a línea el programa. 
+- El lenguaje interpretado ejecuta línea a línea el programa. 
 
 
 | Compilado | Interpretado |  
@@ -108,19 +108,77 @@ Ejemplo:
 ---
 ## Tipos de datos
 
-* Number: Almacena valores numericos.  
-Ej. 10, -40, 3.9, -15.9
-* String: Almacena cadenas de caracteres  
-Ej. "Hola", 'Adios', \`Saludos`
+* number
+* string
+* boolean
+* null
+* undefined
+* symbol
+* bigint
+---
+### Números
 
-* Boolean: Almacena un valor logico  
-Ej. **true** o **false**
+Los números (tipo ***Number***) son los datos más básicos que podemos representar en JS,, no hay una diferencia entre números enteros y números decimales, todos los numero son de tip ***number***: 
 
-* Null: Ausencia de la referecnia de un objeto  
-Ej. ***Null***
+```js
+7
+3.14
+2.999e8
+-122
+-12.34
+```
 
-* Undefined: Ausencia de valor  
-Ej. ***undefined***
+#### Operadores aritméticos
+
+Con los números, puedes usar los **operadores aritmeticos** para realizar operaciones matemáticas. Te mostramos los siguientes operadores: 
+
+* +: suma
+* -: resta
+* *: multipicación
+* /: división
+* %: módulo (reciduo de la división)
+* **: exponente
+
+Te mostramos un ejemplos del uso de operadores: 
+
+```js 
+2 + 2 // 4
+4 - 2 // 2
+3 * 2 // 6
+2 / 2 // 1
+2 % 2 // 0
+3 ** 3 // 27
+```
+
+Al igual que las matemáticas, **las operaciones siguen un orden de precedencia.** Por ejemplo, si queremos sacar el resultado de ***2 + 2 * 3***, primero se multiplica ***2 * 3*** y luego se sumará ***2 + 6*** y su resultado sera ***8***. Pero tambien se puede usar paréntesis para cambiar el orden de las operaciones.
+
+```js
+2 + 2 * 3 // 8
+(2 + 2) * 3 // 12
+```
+---
+#### Cadenas de texto
+
+Las cadenas de texto (tipo **String**) es otro tipo de dato muy común. Las cadenas de texto se representan entre comillas simples, dobles o acentos graves.
+ ```js
+ "Esta es una cadena de texto con doble comilla"
+ 'Esta es una cadena de texto con comilla simple'
+ ```
+
+ Las comillas simples y dobles funcionan igual, pero al usar los acentos graves, se pueden escribir cadena de texto que ocupen varias lineas.
+
+ ```js
+ `Esto es una cadena de texto
+ donde se ocupan varias linea, 
+ y la cantidad de lineas que uses
+ son a tu gusto`
+ ```
+
+##### Concatenación
+Para poder unir dos o mas cadenas de texto, se usa el operador **+**: 
+```js
+"Hola, estamos aprendiendo " + "JavaScript !!" // Hola, estamos aprendiendo JavaScript !!
+```
 
 
 

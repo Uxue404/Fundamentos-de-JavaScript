@@ -180,7 +180,11 @@ Para poder unir dos o mas cadenas de texto, se usa el operador **+**:
 "Hola, estamos aprendiendo " + "JavaScript !!" // Hola, estamos aprendiendo JavaScript !!
 ```
 
-
+***Como puedes notar el operador `+` funciona de forma diferente dependiendo del tipo de dato que estemos usando***
+---
+#### Booleanos
+Los booleanos represneta sólo dos valores: `true` (verdadero) o `false` (falso). Por ejemplo: 
+* ¿Está lloviendo (`true`) o no está lloviendo (`false`)?
 
 
 

@@ -77,7 +77,7 @@ let miOtraVariable = 100;
  let miVariable1;
  ```
 ---
- La notación que se usa para nombrar variables en JS es la "Camel Case".  
+ La notación que se usa para nombrar variables en JS es la "`Camel Case`".  
 
 **Camel Case:**
 Camel Case combina las palabras directamente, sin usar ningún símbolo, estableciendo que la primera letra de cada palabra esté en mayúscula a excepción de la primera palabra, estando el resto de letras en minúsculas. Este tipo de notación está muy extendida, siendo su uso muy común tanto en la declaración de variables como en el nombre de funciones y métodos.
@@ -181,11 +181,51 @@ Para poder unir dos o mas cadenas de texto, se usa el operador **+**:
 ```
 
 ***Como puedes notar el operador `+` funciona de forma diferente dependiendo del tipo de dato que estemos usando***
----
+
+___
 #### Booleanos
 Los booleanos represneta sólo dos valores: `true` (verdadero) o `false` (falso). Por ejemplo: 
 * ¿Está lloviendo (`true`) o no está lloviendo (`false`)?
 
+#### Operadores de comparación
 
+Estos tipos de operadores nos **nos permiten comparar dos valores**. Y estos siempren devuelven un valor booleano (`true` o `false`).
 
+Por ejemplo podemos comparar siun numero es mayor que otro con el operador `>`, o si un numero es menor que otro con el operador `<`.
+
+```js
+5 > 3 // true
+5 < 3 // false
+```
+Tambien tenemos los operadores `>=` y `<=` que nos permiten comparar si un número es mayor o igual que otro o viceversa.
+
+```js
+5 >= 3 // true
+5 >= 5 // true
+5 <= 3 // false
+5 <= 5 // true
+```
+Para saber si dos valores son iguales se usa el operador `==`^
+```js
+4 == 4 // true 
+3 == 4 //false
+'JavaScript' === "JavaScript" // true
+'JavaScript' === `Java` // false
+```
+
+> Fíjate que puedes comparar cadenas de texto que usan comillas simples, dobles o acentos graves. Al final, siguen siendo cadenas de texto y lo importante es que sean iguales.
+
+Para saber si los datos comparados son iguales en cuanto a contenido y a tipo de dato se usa el operador de estrictamente igual `===`. 
+```js
+5 === '5' // false
+4 === 4 // true
+"3" === '3' // true
+```
+
+Y para saber si los datos son desiguales se usa `!=` y `!==` para saber si es estrictamente desigual.
+```js
+console.log(5 !== 2); // true
+console.log(2!='3'); // true
+console.log(2 !== 2); // false
+```
 

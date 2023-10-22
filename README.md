@@ -8,7 +8,7 @@
 
 ## Que es JavaScript
 
-JavaScript es el lenguaje de programación mas utilizado para el desarrollo web (en conjunto con HTML, CSS).
+JavaScript es un lenguaje de programación multiplataforma orientado a objetos que se utiliza para hacer que las páginas web sean interactivas. Tambien hay versiones de JavaScript de lado del servidor más avanzadas, como Node.js que te permiten agregar más funcionalidad a un sitio web que simplemente descargar archivos. 
 
 Usos de JavaScript: 
 + Frontend
@@ -187,8 +187,31 @@ ___
 Los booleanos represneta sólo dos valores: `true` (verdadero) o `false` (falso). Por ejemplo: 
 * ¿Está lloviendo (`true`) o no está lloviendo (`false`)?
 
+### null y undefined
+
+La particularidad de estos dos datos es que cada uno sólo tiene un valor. El tipo `null` sólo puede tener el valor `null` y el tipo `undefined` solo puede tener ese valor.
+
+#### La diferencia entre estos dos
+
+Mientras que `null` es un valor que significa que algo no tiene valor, `undefined` significa que algo no ha sido definido. Por ejemplo, si creamos una variable sin asignarle ningún valor, su valor sera `undefined`:
+```js
+let botella; // --> undefined
+//Tambien se le puede asignar el valor undefined directamente
+let botella1 = undefined; // --> undefined
+``` 
+
+En cambio, para que el valro de una variable sea `null` solo lo conseguiremos si lo asignamos directamente a la variable.
+
+```js
+let caguama = null;
+```
+
+Ejemplo visual para entender la diferencia entre ambas:
+ 
+![ejemploNullUndefined](/images/null-undefined.jpg)
+
 ---
-### Operadores de comparación
+## Operadores de comparación
 
 Estos tipos de operadores nos **nos permiten comparar dos valores**. Y estos siempren devuelven un valor booleano (`true` o `false`).
 
@@ -230,3 +253,44 @@ console.log(2!='3'); // true
 console.log(2 !== 2); // false
 ```
 
+## Operadores lógicos
+
+Los operadores lógicos en JavaScript ( y en otros lenguajes de programación) se utilizan para evaluar expresiones lógicas.
+
+En JavaScript, hay tres operadores lógicos: AND (`&&`), OR (`||`) y NOT (`!`).
+
+### Operador AND ( `&&` )
+
+El operador *AND* se indica con `&&`. Devuelve `true` cuando ambos valores que conceca son `true`.
+
+```js
+true && true // → true
+true && false // → false
+false && false // → false
+```
+
+### Operador OR ( `||` )
+
+El operador lógico *OR* se indica con `||` y devuelve `true` cuando cualquiera de los valores que conecta es`true`.
+
+```js
+true || true // → true
+true || false // → true
+false || false // → false
+```
+
+### Operador NOT ( `!` )
+
+El operador lógico *NOT* se indica con `!` e invierte el valor de un valor booleano. Se pone delante del valor que queremos invertir.
+
+```js
+!true // → false
+!false // → true
+```
+
+## Combinando operadores lógicos, aritméticos y de comparación
+
+Los operadores lógicos y los operadores de comparación se pueden combinar para crear expresiones más complejas. Por ejemplo, podemos preguntar si un número está entre dos valores.
+```js
+2 < 3 && 3 < 4 // → true
+```

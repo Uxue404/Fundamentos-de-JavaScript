@@ -89,6 +89,18 @@ Ejemplo:
 JavaScript es sensible a mayúsculas y minúsculas.
 
 Ejemplo: **miNombre** ≠ **minombre**
+---
+## Constantes
+
+Una constante es una variable que una vez definido su valor, ya no se puede modificar.
+
+Como buena práctica, el nombre de una constante se define en mayúsculas, y si tiene más palabras se separan con guión bajo ( _ ).
+```js
+const MI_CONSTANTE = 10;
+console.log(MI_CONSTANTE); // 10
+
+MI_CONSTANTE = 20; // Assigment to constant variable
+```
 
 ---
 ## Comentarios en JavaScript
@@ -207,7 +219,7 @@ let caguama = null;
 ```
 
 Ejemplo visual para entender la diferencia entre ambas:
- 
+
 ![ejemploNullUndefined](/images/null-undefined.jpg)
 
 ---
@@ -293,4 +305,29 @@ El operador lógico *NOT* se indica con `!` e invierte el valor de un valor bool
 Los operadores lógicos y los operadores de comparación se pueden combinar para crear expresiones más complejas. Por ejemplo, podemos preguntar si un número está entre dos valores.
 ```js
 2 < 3 && 3 < 4 // → true
+```
+
+## Operador typeof
+
+Este operador `typeof` devuelve una cadena de texto que indica el tipo de un operando. Puede ser usado con cualquier tipo de operando, esto incluye a las variables y literales.
+
+```js
+let numero = 7
+console.log(typeof numero); // "number"
+```
+
+El `typeof` tambien puede ser usado con los valores que quieras (booleanos, undifined, number, string).
+
+Sin embargo, existe un valor especial en JavaScript, `null`, que es considerado un bug dentro del lenguaje. Si usamos **typeof** en un valor **null** no devolvera **"object"**.
+
+```js
+typeof null // "object"
+```
+Lo correcto seria que nos devolviera **null**, pero es un [error histórico que no se puede corregir sin romper el código existente.](https://2ality.com/2013/10/typeof-null.html)
+
+Te doy algunos ejemplos de comparacion con el typeof:
+
+```js
+let age = 22;
+console.log(typeof age == "number"); // true
 ```

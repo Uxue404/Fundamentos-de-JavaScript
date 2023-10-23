@@ -333,3 +333,101 @@ Te doy algunos ejemplos de comparacion con el typeof:
 let age = 22;
 console.log(typeof age == "number"); // true
 ```
+
+## Estrcuturas de control
+
+Las estructuras de control en programación son herramientas que te permiten dirigir el flujo de ejecución de un programa. Son como las instrucciones que le das a la computadora para que tome decisiones o realice acciones específicas basadas en ciertas condiciones.
+
+### Código condcional con ***if***
+
+El codigo condicional es un bloque de código que se ejecuta sólo si se cumple una condición. En JS la palabra reservada para crear un bloque condicional es el ***if***
+
+Diagrama de flujo
+
+![DF_IF](/images/If.png)
+
+Sintaxis 
+
+```js 
+if (condición) {
+  // código que se ejecuta si la condición es verdadera
+}
+```
+Como vez en caso de que la condición se cumpla se ejecutara el bloque de códgio correspondiente, pero ¿Qué pasa si la condición es falsa? Para esto tenemos la siguiente palabra clave ***else***. La cual nos ayudara a ejecutar un bloque de código si la condición es falsa.
+
+```js
+const edad = 17
+if (edad >= 18) {
+  console.log('Eres mayor de edad')
+} else {
+  console.log('Eres menor de edad') // En este caso se ejecuta este bloque de código.
+}
+```
+
+También podemos utilizar la palabra clave else if para comprobar más de una condición:
+
+```js
+let edad = 17
+
+if (edad >= 18) {
+  console.log('Eres mayor de edad')
+} else if (edad >= 16) {
+  console.log('Eres casi mayor de edad')
+} else {
+  console.log('Eres menor de edad')
+}
+```
+
+El programa comprueba la primera condición. Si es true, ejecuta el código dentro del bloque ***if***. Si es ***false***, comprueba la siguiente condición. Si es ***true***, ejecuta el código dentro del bloque else ***if***. Si es ***false***, ejecuta el código dentro del bloque ***else***.
+
+Dicho de otra forma, entrará en el primer bloque que cumpla la condición y no entrará en los demás. Si no cumple ninguna, entonces entrará en el bloque else.
+
+#### Anidación de condicionales
+
+Con todo lo anterior, es posible anidar condicionales dentro de otros condicionales. Te doy un ejemplo:
+
+```js
+const edad = 17
+const tieneCarnet = true
+
+if (edad >= 18) {
+  if (tieneCarnet) {
+    console.log('Puedes conducir')
+  } else {
+    console.log('No puedes conducir')
+  }
+} else {
+  console.log('No puedes conducir')
+}
+```
+
+Muchas veces vas a querer evitar la anidación inncesesario de caondicionales. ya que se hacen díficiñes de leer e incluso de mantener. Para estos casos es mejor usar operadores lógicos para crear la condición: 
+
+```js
+const edad = 17
+const tieneCarnet = true
+
+// si es mayor de edad y tiene carnet entonces...
+if (edad >= 18 && tieneCarnet) {
+  console.log('Puedes conducir')
+} else {
+  console.log('No puedes conducir')
+}
+```
+
+La otra técnica que se usa es guadar el resultado de la condicion en una variable. 
+
+```js 
+const edad = 17
+const tieneCarnet = true
+const puedeConducir = edad >= 18 && tieneCarnet
+
+if (puedeConducir) {
+  console.log('Puedes conducir')
+} else {
+  console.log('No puedes conducir')
+}
+```
+
+> Con esto podemos mejorar la lectura de nuestro código, a esta técnica se le conoce como ***refactorización*** y consiste en mejorar el código sin cambiar su comportamiento. 
+

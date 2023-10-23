@@ -89,6 +89,8 @@ Ejemplo:
 JavaScript es sensible a mayúsculas y minúsculas.
 
 Ejemplo: **miNombre** ≠ **minombre**
+
+
 ---
 ## Constantes
 

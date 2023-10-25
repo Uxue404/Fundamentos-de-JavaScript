@@ -1,7 +1,7 @@
-console.log("Hola Mundo soy Uxue y estoy aprendiendo JS");
+let cont = 0;
 
-console.log(5 !== 2);
-console.log(2!='3');
-console.log(2 !== 2);
-
-console.error("Error al conectar la base de datos");
+while (cont < 5)
+  {
+    console.log("Hola Uxue");
+    cont ++; // En este caso necesitamo incrementar cont para que cumpla la condicion si no permanecera en 0 y se hara un ciclo infinito.
+  } 

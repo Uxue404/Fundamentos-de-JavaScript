@@ -431,3 +431,32 @@ if (puedeConducir) {
 
 > Con esto podemos mejorar la lectura de nuestro código, a esta técnica se le conoce como ***refactorización*** y consiste en mejorar el código sin cambiar su comportamiento. 
 
+
+### Ciclos
+
+Un ciclo nos permite repetir un bloque de código mientra la condicion sea verdadera.
+
+* While
+* Do while
+* For
+
+#### Ciclo `while`
+
+```js
+while (condicion){
+  // Instrucciones a cumplir
+}
+```
+
+Ejemplo, imprimir 5 veces mi nombre
+
+```js 
+let cont = 0;
+
+while (cont < 5)
+  {
+    console.log("Hola Uxue");
+    cont ++; // En este caso necesitamo incrementar cont para que cumpla la condicion si no permanecera en 0 y se hara un ciclo infinito.
+  } 
+```
+

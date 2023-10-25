@@ -334,7 +334,7 @@ let age = 22;
 console.log(typeof age == "number"); // true
 ```
 
-## Estrcuturas de control
+## Estructuras de control
 
 Las estructuras de control en programación son herramientas que te permiten dirigir el flujo de ejecución de un programa. Son como las instrucciones que le das a la computadora para que tome decisiones o realice acciones específicas basadas en ciertas condiciones.
 

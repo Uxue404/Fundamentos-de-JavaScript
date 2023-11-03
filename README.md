@@ -434,7 +434,7 @@ if (puedeConducir) {
 
 ### Ciclos
 
-Un ciclo nos permite repetir un bloque de código mientra la condicion sea verdadera.
+Un ciclo o un bucle nos permite repetir un bloque de código mientra la condicion sea verdadera.
 
 * While
 * Do while

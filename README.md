@@ -90,6 +90,35 @@ JavaScript es sensible a mayúsculas y minúsculas.
 
 Ejemplo: **miNombre** ≠ **minombre**
 
+---
+## Expresiones y declaraciones 
+
+En JavaScript, existen dos tipos de elemnetos fundamentales para escribir código: `expresiones y declaraciones`.
+
+### Declaraciones 
+
+Las declaraciones son sentencias que definen la creación de una variable, función o clase. Podríamos decir que las declaraciones son cmo las intrucciones que le damos a JS para que haga algo. 
+
+Por ejemplo, una delcaración de variable es una sentencia que le da un nombre y u nvalor a una variable. El siguiente código es un ejemplo de una declaración de una variable: 
+
+```js
+let nombre = "Uxue";
+```
+
+### Expresiones 
+
+Las expresiones son sentencias que producen un valor. Las expresiones pueden ser tan simples como un solo número o una cadena de texto, o tan complejas como el cálculo de una operación matemática, la evaluación de diferentes valores o la llamada a una función.
+
+```js
+2 + 3 --> 5
+```
+
+De hecho lo que guardamos en las variables son expresiones. Por ejemplo, en el siguiente código, la expresión `2+3` se evalúa y el resultado se guarda en la variable `resultado`
+
+```js
+let resultado = 3+5;
+```
+
 
 ---
 ## Constantes
@@ -442,11 +471,21 @@ Un ciclo o un bucle nos permite repetir un bloque de código mientra la condicio
 
 #### Ciclo `while`
 
+El bucle while es una estructura de control de flujo que ejecuta una sección de código mientras se cumple una determinada condición.
+
+
+
 ```js
 while (condicion){
   // Instrucciones a cumplir
 }
 ```
+
+El bucle comienza evaluando la condición dentro de los paréntesis. Si la condición es true, se ejecuta el código dentro de las llaves.
+
+Después de ejecutar el código, la condición se evalúa de nuevo, y si sigue siendo verdadera, el código dentro de las llaves se ejecuta de nuevo. Este proceso se repite hasta que la condición se evalúa como falsa.
+
+>A cada vuelta del bucle se le llama iteración. Una iteración es la repetición de un proceso o acción un número determinado de veces, de manera ordenada y sistemática.
 
 Ejemplo, imprimir 5 veces mi nombre
 
@@ -459,4 +498,62 @@ while (cont < 5)
     cont ++; // En este caso necesitamo incrementar cont para que cumpla la condicion si no permanecera en 0 y se hara un ciclo infinito.
   } 
 ```
+
+#### Clico `do while`
+
+Este tipo de bucle se ejecuta al menos una vez, y luego se repite mientras se cumpla una condición
+
+```js
+do {
+  //Código que se ejecuta al menos una vez
+}while (condición)
+```
+
+#### Ciclo `for`
+
+La estructura for en JS es muy útil para ejecutar una serie de instrucciones un número finito de veces. A diferencia del while que usa una condición para determinar si ejecuta o no el bloque de sentencias, for usa una contador que se incrementa en cada iteración hasta que se cumpel una condición. 
+
+```js
+for (incializacion; condicion; actualizacion){
+  // sentencias
+}
+```
+Importante, fíjate que for tiene tres partes separadas por ;:
+
+* La inicialización se realiza antes de que se inicie el bucle y se utiliza para declarar variables y asignar valores iniciales.
+
+* La condición es una expresión booleana que se evalúa antes de cada iteración del bucle. Si la expresión se evalúa como true, se ejecuta el bloque de código dentro del bucle. Si la expresión se evalúa como false, el bucle termina.
+
+* La actualización se utiliza para actualizar el valor de la variable de control del bucle después de cada iteración. Normalmente, se incrementa o decrementa el valor de la variable de control del bucle.
+
+```js 
+for (let number = 1; number <= 10; number++) {
+  console.log(number)
+}
+```
+* La inicialización es la declaración de la variable number y la asignación del valor 1.
+* La condición es que mientras number <= 10, se itera el bucle.
+* La actualización es number++ que incrementa el valor de number en 1 después de cada iteración.
+
+#### Switch
+La sentencia switch es una estructura de control que nos permite jecutar diferentes bloques de código dependiendo del valor de una expresión, Esta estrcutura es útil cuando queremos realizar diferentes acciones basadas en una única varible
+
+Esta sentencia evalúa una expresión, comparando el valro con los diferentes casso que le hemos definido. Si hay coincidencia ejecuta el bloque de código asociado. Para ello, se utiliza la sentencia break para separar cada caso y evitar que se sigan evaluando el resto de casos. 
+
+```js
+switch (expresión) {
+  case valor1:
+    // código a ejecutar si la expresión coincide con valor1
+    break
+
+  case valor2:
+    // código a ejecutar si la expresión coincide con valor2
+    break
+  default:
+    // código a ejecutar si la expresión no coincide con ningún valor
+    break
+}
+```
+
+>La condición de default es opcional. No es obligatorio que la uses si no la necesitas. Es como el else de las condiciones if.
 
